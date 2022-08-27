@@ -1,6 +1,8 @@
 import React from 'react'
 import './Navbar.css'
 import SearchBar from '../searchBar/SearchBar'
+import {Link} from 'react-router-dom';
+
 
 
 function Nav({prips}) {
@@ -8,9 +10,9 @@ function Nav({prips}) {
   return (
     <div className='case'>
       <div className='flexo'>
-          <div className='tit'>ATAFLIX</div>
+          <div className='tit'><Link to='/'>ATAFLEX</Link></div>
           <SearchBar prups={prips} />
-          <div className='fav'>Mes favoris</div>
+          <button className='fav'><Link to="/favorite">favoris</Link></button>
       </div>
     </div>
   )

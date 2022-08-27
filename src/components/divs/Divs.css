@@ -1,0 +1,10 @@
+.apparence{
+    display: grid;
+    grid-template-columns: repeat( 20 , 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    overflow: scroll;
+    gap: 1.5em;
+}
+.apparence::-webkit-scrollbar{
+    display: none;
+}
