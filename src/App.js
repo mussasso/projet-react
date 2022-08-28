@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState, useEffect} from 'react';
+import tmdb from './api/tmdb'
+import NavBar from './components/navBar/Navbar';
+import Bridge from './components/bridge/Bridge';
+import Fav from './components/favoris/Fav';
+import { Routes , Route} from "react-router-dom"
 
 function App() {
+  const [moviePopular, setMoviePopular]= useState([]);
+
+  useEffect( () => {
+    const fetchMovies = async() => {
+        const {data} = await tmdb.get("movie/popular")
+        setMoviePopular(data.results)
+    }
+  
+  fetchMovies()
+    }, [] )
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar prips={moviePopular} />
+      <Routes>
+        <Route exact path="/" element={<Bridge prits={moviePopular} />}  />
+        <Route path="/favorite" element={<Fav sprout={moviePopular} />}  />
+      </Routes>
     </div>
   );
 }

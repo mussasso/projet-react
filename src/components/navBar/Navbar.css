@@ -1,0 +1,33 @@
+.tit{
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 40px;
+}
+.flex{
+    justify-content: center;
+}
+.barre{
+    height: 30px;
+    width: 240px;
+}
+.barre2{
+    height: 36px;
+    margin-left: 5px;
+}
+.flexo{
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    font-weight: bold;
+}
+.fav{
+    padding: 5px;
+    color: green;
+}
+.fav:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+

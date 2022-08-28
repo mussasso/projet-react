@@ -1,0 +1,28 @@
+.parent{
+    margin: 100px 0;
+    position: relative;
+}
+
+.cardInfo{
+    height: 500px 
+}
+.cardInfo img{
+    height: 100%;
+    width: auto;
+    text-align: center;
+}
+.card-text{
+    display: none;
+
+}
+.cardInfo:hover .card-text{
+    transition: 2s ease-in-out;
+    display: block;
+    position: absolute;
+    width: 333px;
+    height: 500px;
+    align-items: center;
+    top: 0px;
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, 0.7);
+}
