@@ -7,8 +7,7 @@ function Bridge({prits}) {
     <div>
         {arr.map((e,index) => {
         return <Divs  prips={prits} key={index} {...e}  />
-        
-      })}
+        })}
     </div>
   )
 }

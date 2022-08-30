@@ -23,7 +23,7 @@ function App() {
       <NavBar prips={moviePopular} />
       <Routes>
         <Route exact path="/" element={<Bridge prits={moviePopular} />}  />
-        <Route path="/favorite" element={<Fav sprout={moviePopular} />}  />
+        <Route path="/Favorite" element={<Fav sprout={moviePopular} />}  />
       </Routes>
     </div>
   );

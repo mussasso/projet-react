@@ -5,21 +5,27 @@ import {Link} from 'react-router-dom';
 
 
 
-function Fav(sprout) {
+function Fav({sprout}) {
 
     console.log(sprout);
+    
 
   return (
     <div>
         <div>
           <ul>
-            <li><Link to="/hey">film a voir</Link></li>
-            <li><Link to="/">film deja vue</Link></li>
+            <li><Link to="/Favorite/Vue">film a voir</Link></li>
+            <li><Link to="/Favorite/Book">film deja vue</Link></li>
           </ul>
         </div>
-        <Routes>
-          <Route exact path="/favorite/" element={<Cards crds={sprout} />} />
-          <Route exact path="/favorite/hey" element={<h1>hey</h1>} />
+        <div>
+        {sprout.map( (e , index) => {
+      return <Cards crds={sprout} key={index} {...e} />
+          })}
+        </div>
+        <Routes>:
+          <Route exact path="/Favorite/Vue" element={<Cards crds={sprout} />} />
+          <Route path="/Favorite/Book" element={<h1>hey</h1>} />
         </Routes>
     </div>
   )
